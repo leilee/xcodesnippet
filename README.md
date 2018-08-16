@@ -3,11 +3,16 @@
 
 ## Installation
 
+~~gem install xcodesnippet~~
+
 ```
-$ gem install xcodesnippet
+$ gem build xcodesnippet.gemspec
+$ gem install -l xcodesnippet-0.0.2.gem
 ```
 
 ## Usage
+
+### Example
 
 #### Sourcefile.swift
 
@@ -15,13 +20,38 @@ $ gem install xcodesnippet
 ---
 title: "Hello, World!"
 summary: "Prints 'Hello World'"
-completion-scope: Function or Method
+completion-scopes:
+  - CodeBlock
 ---
 
 println("Hello, World!")
 ```
 
-#### Terminal Command
+### Completion Scopes
+
+#### Objective-C
+
+* `ClassImplementation`
+* `CodeExpression`
+* `Preprocessor`
+* `ClassInterfaceVariables`
+* `All`
+* `TopLevel`
+* `ClassInterfaceMethods`
+* `CodeBlock`
+* `StringOrComment`
+
+#### Swift
+
+* `TopLevel`
+* `ClassImplementation`
+* `CodeBlock`
+* `All`
+* `CodeExpression`
+* `StringOrComment`
+
+
+### Terminal Command
 
 ```
 $ xcodesnippet install path/to/source.m

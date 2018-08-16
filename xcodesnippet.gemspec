@@ -14,11 +14,11 @@ Gem::Specification.new do |s|
   s.summary     = "xcodesnippet"
   s.description = "A command-line interface for installing Xcode Snippets."
 
-  s.add_dependency "yaml-front-matter"
-  s.add_dependency "plist"
+  s.add_dependency "yaml-front-matter", "~> 0"
+  s.add_dependency "plist", "~> 3.4"
   s.add_dependency "commander", "~> 4.1"
 
-  s.add_development_dependency "rake"
+  s.add_development_dependency "rake", "~> 12"
 
   s.files         = Dir["./**/*"].reject { |file| file =~ /\.\/(bin|log|pkg|script|spec|test|vendor)/ }
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
